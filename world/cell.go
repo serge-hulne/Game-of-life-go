@@ -80,7 +80,7 @@ func CheckNeighbours(w World, c Cell) Cell {
 	}
 
 	// "Any live cell with two or three live neighbours lives on to the next generation."
-	if (neighbours_alive == 2) && (neighbours_alive == 3) && c.Alive {
+	if ((neighbours_alive == 2) || (neighbours_alive == 3)) && c.Alive {
 		c.Alive = true
 	}
 
